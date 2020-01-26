@@ -1,8 +1,8 @@
 import React from 'react'
-import Menu from '../components/Menu';
+import Slider from '../components/Slider';
 
 const IndexPage = () => (
-    <Menu />
+    <Slider />
 );
 
 export default IndexPage
