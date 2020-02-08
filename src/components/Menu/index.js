@@ -1,9 +1,14 @@
 import React from "react"
+import MenuContainer from './MenuContainer';
+import "./styles.css"
 
 const Menu = () => (
-    <nav>
-        Menu
-    </nav>
+    <>
+        <nav className="nav-menu">
+            menu
+        </nav>
+        <MenuContainer />
+    </>
 );
 
 export default Menu;

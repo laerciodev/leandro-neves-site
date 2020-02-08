@@ -1,9 +1,10 @@
 import React from 'react'
 import Slider from '../components/Slider';
-import ImageSlide from '../components/ImageSlide';
+import Header from '../components/Header';
 
 const IndexPage = () => (
     <>
+        <Header />
         <Slider />
     </>
 );
