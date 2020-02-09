@@ -30,7 +30,6 @@ const ImageSlide = () => {
     const length = allFile.edges.length - 1;
     
     const handleNext = () =>  {
-        console.log('função executada!'); 
         index === length ? setIndex(0) : setIndex(index + 1) 
     };
     const handlePrev = () => { 
@@ -40,10 +39,10 @@ const ImageSlide = () => {
     const { node } = allFile.edges[index]; 
 
     const initEffect = () => {
-        setTimeout(handleNext, 1000, 0);
+        setTimeout(handleNext, 2000);
     }
 
-    useEffect(initEffect, []);
+    useEffect(initEffect, [index]);
 
     return (
         <div>
