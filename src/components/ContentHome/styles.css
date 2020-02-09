@@ -1,0 +1,41 @@
+.container-content-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-home {
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'Raleway';
+    width: 268px;
+    margin-top: 50px;
+    margin-bottom: 96px;
+    margin-left: 5%;
+    text-transform: lowercase;
+}
+
+.content-home::before,
+.content-home::after {
+    content: "\"";
+}
+
+.container-caption-image {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.caption {
+    width: 40%;
+    text-transform: lowercase;
+    text-align: left;
+    font-size: 12px;
+    position: relative;
+}
+
+.p-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+}

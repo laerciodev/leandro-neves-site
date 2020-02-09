@@ -1,0 +1,6 @@
+.container-gallery-home {
+    display: flex;
+    justify-content: space-around;
+    width: 98%;
+    margin: 64px auto;
+}

@@ -3,7 +3,7 @@ import Menu from "../Menu"
 import "./styles.css"
 
 const Header = () => (
-  <header class="header">
+  <header className="header">
     <Menu />
   </header>
 )

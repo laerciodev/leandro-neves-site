@@ -9,8 +9,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content-home`,
+        path: `${__dirname}/src/static/assets/img/content-home`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `slides`,
         path: `${__dirname}/src/static/assets/img/slides`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `gallery-home`,
+        path: `${__dirname}/src/static/assets/img/gallery-home`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content-home`,
+        path: `${__dirname}/src/static/assets/img/content-home`
       }
     },
     {

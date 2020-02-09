@@ -2,14 +2,14 @@ import React from "react"
 import "./styles.css"
 
 const MenuContainer = () => (
-    <ul class="menu-container">
-        <li class="menu-item">portfólio</li>
-        <li class="menu-item">nós</li>
-        <li class="menu-item">contato</li>
-        <li class="menu-item">nós</li>
-        <li class="menu-item">nós</li>
-        <li class="menu-item">nós</li>
-        <li class="menu-item">nós</li>
+    <ul className="menu-container">
+        <li className="menu-item">portfólio</li>
+        <li className="menu-item">nós</li>
+        <li className="menu-item">contato</li>
+        <li className="menu-item">nós</li>
+        <li className="menu-item">nós</li>
+        <li className="menu-item">nós</li>
+        <li className="menu-item">nós</li>
     </ul>
 );
 
