@@ -52,7 +52,7 @@ const GalleryImageHome = () => {
         <>
             <section className="container-gallery-home">
                 { imgs.map( img => (
-                    <Img fixed={ img.node.childImageSharp.fixed } id={ img.node.id } />
+                    <Img fixed={ img.node.childImageSharp.fixed } key={ img.node.id } />
                 )) }
             </section>
             <Img fluid={ imgFull.node.childImageSharp.fluid } id={ imgFull.node.id } /> 
