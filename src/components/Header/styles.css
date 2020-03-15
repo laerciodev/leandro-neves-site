@@ -1,4 +1,8 @@
 .header {
     margin: 0 auto;
-    height: 60px;
+    height: 46px;
+}
+
+.header .open-menu {
+    display: block;
 }

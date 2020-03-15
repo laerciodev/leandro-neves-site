@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.container-slider.open-menu {
+    opacity: 0;
+}
+
 .slides {
     display: flex;
     overflow-x: auto;
