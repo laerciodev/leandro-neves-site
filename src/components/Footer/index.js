@@ -5,7 +5,7 @@ import './styles.css';
 
 const Footer = () => (
     <>
-        <a className="btn-back" href="/">Voltar</a>
+        {/* <a className="btn-back" href="/">&lt; Voltar</a> */}
         <footer className="footer">
             <MenuContainer />
             <h3 className="social-media-title">Redes sociais</h3>

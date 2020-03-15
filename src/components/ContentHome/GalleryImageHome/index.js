@@ -55,7 +55,7 @@ const GalleryImageHome = () => {
                     <Img fixed={ img.node.childImageSharp.fixed } key={ img.node.id } />
                 )) }
             </section>
-            <Img fluid={ imgFull.node.childImageSharp.fluid } id={ imgFull.node.id } /> 
+            <Img className="last-image-home" fluid={ imgFull.node.childImageSharp.fluid } id={ imgFull.node.id } /> 
         </>
     )
 };

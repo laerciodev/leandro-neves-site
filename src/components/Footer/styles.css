@@ -1,6 +1,11 @@
 .btn-back {
+    display: inline-block;
     text-decoration: none;
     text-transform: lowercase;
+    font-size: 18px;
+    color: #707070;
+    margin-top: 30px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 
