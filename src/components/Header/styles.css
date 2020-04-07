@@ -1,4 +1,15 @@
 .header {
     margin: 0 auto;
     height: 60px;
+    padding-top: 24px;
+    background-color: #BCBCBC;
+    display: flex;
+}
+
+.logo-header {
+    width: 66px;
+    height: auto;
+    margin-left: 24px;
+    fill: #FFF;
+    cursor: pointer;
 }

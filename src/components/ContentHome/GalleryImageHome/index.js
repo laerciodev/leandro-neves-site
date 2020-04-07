@@ -31,7 +31,7 @@ const GalleryImageHome = () => {
                   node {
                     id
                     childImageSharp {
-                        fluid(maxWidth: 768) {
+                        fluid(maxWidth: 768, quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
                     }
@@ -43,7 +43,7 @@ const GalleryImageHome = () => {
     );
     
     // pega todas as imagens, menos a última
-    const imgs = allFile.edges.slice(0, -1);
+    const imgs = allFile.edges;
     
     // get full image
     const imgFull = fullImage.edges[0];
@@ -51,8 +51,8 @@ const GalleryImageHome = () => {
     return (
         <>
             <section className="container-gallery-home">
-                { imgs.map( img => (
-                    <Img fixed={ img.node.childImageSharp.fixed } id={ img.node.id } />
+                { imgs.map( (img, index) => (
+                    <Img key={index} fixed={ img.node.childImageSharp.fixed } id={ img.node.id } />
                 )) }
             </section>
             <Img fluid={ imgFull.node.childImageSharp.fluid } id={ imgFull.node.id } /> 
