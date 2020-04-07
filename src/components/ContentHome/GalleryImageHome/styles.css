@@ -1,6 +1,15 @@
+.header {
+    background-color: rgba(136, 133, 117, 0.24);
+    padding-top: 24px;
+}
+
 .container-gallery-home {
     display: flex;
     justify-content: space-around;
     width: 98%;
     margin: 64px auto;
+}
+
+.last-image-home {
+    margin-bottom: 30px;
 }

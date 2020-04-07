@@ -51,11 +51,11 @@ const GalleryImageHome = () => {
     return (
         <>
             <section className="container-gallery-home">
-                { imgs.map( (img, index) => (
-                    <Img key={index} fixed={ img.node.childImageSharp.fixed } id={ img.node.id } />
+                { imgs.map( img => (
+                    <Img fixed={ img.node.childImageSharp.fixed } key={ img.node.id } />
                 )) }
             </section>
-            <Img fluid={ imgFull.node.childImageSharp.fluid } id={ imgFull.node.id } /> 
+            <Img className="last-image-home" fluid={ imgFull.node.childImageSharp.fluid } id={ imgFull.node.id } /> 
         </>
     )
 };

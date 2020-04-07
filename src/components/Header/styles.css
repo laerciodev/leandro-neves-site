@@ -13,3 +13,7 @@
     fill: #FFF;
     cursor: pointer;
 }
+
+.header .open-menu {
+    display: block;
+}
