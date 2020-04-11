@@ -1,9 +1,10 @@
-import React from "react"
+import React from "react";
+import { Link } from 'gatsby';
 import "./styles.css"
 
-const MenuContainer = () => (
-    <ul className="menu-container">
-        <li className="menu-item">portfólio</li>
+const MenuContainer = ({ openMenu }) => (
+    <ul className={`menu-container ${openMenu ? 'open-menu' : ''}`}>
+        <li className="menu-item"><Link to="/portfolio">portfólio</Link></li>
         <li className="menu-item">online</li>
         <li className="menu-item">lab</li>
         <li className="menu-item">nós</li>

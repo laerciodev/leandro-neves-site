@@ -42,7 +42,8 @@ const ImageSlide = () => {
         setTimeout(handleNext, 2000);
     }
 
-    useEffect(initEffect, [index]);
+    // useEffect(initEffect, [index]);
+    // useEffect(() => {console.log('willunmount')}, []);
 
     return (
         <div>

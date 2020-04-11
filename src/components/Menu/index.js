@@ -1,21 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 import MenuContainer from './MenuContainer';
 import "./styles.css"
 
 const Menu = () => {
     
-    const toggleMenu = (e) => {
-        const slider = document.querySelector('.container-slider');
-        slider.classList.toggle('open-menu');
-        e.target.nextSibling.classList.toggle('open-menu');
+    const [ openMenu, setOpenMenu ] = useState(false);
+
+    const slider = document.querySelector('.container-slider');
+
+    const toggleMenu = () => {
+        if (slider !== null) {
+            slider.classList.toggle('open-menu');
+        }
+        setOpenMenu(!openMenu);
     }
 
     return (
         <>
-            <nav onClick={toggleMenu} className="nav-menu">
+            <nav onClick={toggleMenu} className='nav-menu'>
                 menu
             </nav>
-            <MenuContainer />
+            <MenuContainer openMenu={openMenu}/>
         </>
     )
 };
