@@ -31,7 +31,7 @@ const GalleryImageHome = () => {
                   node {
                     id
                     childImageSharp {
-                        fluid(maxWidth: 768) {
+                        fluid(maxWidth: 768, quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
                     }
@@ -43,7 +43,7 @@ const GalleryImageHome = () => {
     );
     
     // pega todas as imagens, menos a última
-    const imgs = allFile.edges.slice(0, -1);
+    const imgs = allFile.edges;
     
     // get full image
     const imgFull = fullImage.edges[0];

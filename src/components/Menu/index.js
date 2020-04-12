@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import MenuContainer from './MenuContainer';
 import "./styles.css"
 
@@ -6,12 +6,13 @@ const Menu = () => {
     
     const [ openMenu, setOpenMenu ] = useState(false);
 
-    const slider = document.querySelector('.container-slider');
-
     const toggleMenu = () => {
-        if (slider !== null) {
-            slider.classList.toggle('open-menu');
+        const header = document.querySelector('.header');
+
+        if (header !== null) {
+            header.classList.toggle('open-menu');
         }
+
         setOpenMenu(!openMenu);
     }
 
@@ -20,7 +21,7 @@ const Menu = () => {
             <nav onClick={toggleMenu} className='nav-menu'>
                 menu
             </nav>
-            <MenuContainer openMenu={openMenu}/>
+            <MenuContainer />
         </>
     )
 };

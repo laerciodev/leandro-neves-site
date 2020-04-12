@@ -32,18 +32,18 @@ const ImageSlide = () => {
     const handleNext = () =>  {
         index === length ? setIndex(0) : setIndex(index + 1) 
     };
-    const handlePrev = () => { 
-        index === 0 ? setIndex(length) : setIndex(index - 1)
-    };
     
     const { node } = allFile.edges[index]; 
 
     const initEffect = () => {
-        setTimeout(handleNext, 2000);
+        const timeout = setTimeout(handleNext, 2000);
+
+        return () => {
+            clearTimeout(timeout);
+        }
     }
 
-    // useEffect(initEffect, [index]);
-    // useEffect(() => {console.log('willunmount')}, []);
+    useEffect(initEffect, [index]);
 
     return (
         <div>
