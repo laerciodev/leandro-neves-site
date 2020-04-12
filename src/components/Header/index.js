@@ -1,11 +1,14 @@
 import React from "react"
+import { Link } from 'gatsby';
 import Menu from "../Menu"
 import "./styles.css"
 import Logo from '../../static/assets/img/svg/logo.inline.svg'
 
 const Header = () => (
   <header className="header">
-    <Logo />
+    <Link className="link-home" to="/">
+      <Logo />
+    </Link>
     <Menu />
   </header>
 )

@@ -2,8 +2,19 @@
     margin: 0 auto;
     height: 60px;
     padding-top: 24px;
-    background-color: #BCBCBC;
     display: flex;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.header.open-menu {
+    background-color: #BCBCBC;
+}
+
+.link-home {
+    margin-top: 24px;
 }
 
 .logo-header {
@@ -12,7 +23,7 @@
     margin-left: 24px;
     fill: #000;
     cursor: pointer;
-    margin-top: -15px;
+    margin-top: -30px;
 }
 
 .header .open-menu {
