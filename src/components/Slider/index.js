@@ -3,7 +3,6 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import ContainerSlides from './ContainerSlides';
 import SlideControl from './SlideControl';
 import './styles.css';
-import { render } from 'react-dom';
 
 const Slider = () => {
     const [index, setIndex] = useState(0);
@@ -80,7 +79,6 @@ const Slider = () => {
             <div className="container-controls">
                { renderControls() }
             </div>
-            <button onClick={verImagens}>ver imagem</button>
         </>
     );
 
