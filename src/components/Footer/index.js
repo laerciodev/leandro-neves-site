@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import MenuContainer from '../Menu/MenuContainer';
 import './styles.css';
 
@@ -9,7 +10,7 @@ const Footer = () => (
         <footer className="footer">
             <MenuContainer />
             <h3 className="social-media-title">Redes sociais</h3>
-            <a className="email-contact">contato@studioleandroneves.com</a>
+            <Link to="/contato" className="email-contact">contato@studioleandroneves.com</Link>
             <p className="copyright">leandroneves&copy;</p>
         </footer>
     </>
