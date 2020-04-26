@@ -45,16 +45,7 @@ const ImageSlide = () => {
 
     useEffect(initEffect, [index]);
 
-    return (
-        <div>
-            <div>
-                <Img 
-                    fluid={node.childImageSharp.fluid}
-                    key={node.id}
-                />
-            </div>
-        </div>
-    );
+    return <Img fluid={node.childImageSharp.fluid} key={node.id} />
 }
 
 export default ImageSlide;
