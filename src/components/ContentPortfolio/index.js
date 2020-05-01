@@ -35,7 +35,7 @@ const ContentPortfolio = () => {
             <picture>
                 <img className="img-portfolio" src={item.node.childImageSharp.fluid.src} />
             </picture>
-            <h2 class="title-item-portfolio">{ labels[index] }</h2>
+            <h2 className="title-item-portfolio">{ labels[index] }</h2>
         </div>    
     );
     
