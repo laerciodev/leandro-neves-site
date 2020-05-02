@@ -9,7 +9,7 @@ const MenuContainer = () => (
         <li className="menu-item">lab</li>
         <li className="menu-item"><Link to="/nos" className="link" title="nós">nós</Link></li>
         <li className="menu-item">mídia</li>
-        <li className="menu-item">contato</li>
+        <li className="menu-item"><Link to="/contato" className="link" title="contato">contato</Link></li>
     </ul>
 );
 

@@ -1,5 +1,6 @@
 .text-nos {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 25px;
     width: calc(100% - 76px);
     margin: 72px auto 20px;
 }

@@ -67,6 +67,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content-contato`,
+        path: `${__dirname}/src/static/assets/img/content-contato`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `full-image`,
         path: `${__dirname}/src/static/assets/img/full-image`
       }
