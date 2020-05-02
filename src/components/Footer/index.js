@@ -4,7 +4,7 @@ import MenuContainer from "../Menu/MenuContainer"
 import "./styles.css"
 
 const Footer = () => {
-  const url = typeof window !== undefined ? window.location.pathname : ""
+  const url = typeof window !== "undefined" ? window.location.pathname : ""
 
   return (
     <>
