@@ -16,8 +16,8 @@ const ContentContato = () => {
                         node {
                             id
                             childImageSharp {
-                            fluid(maxWidth: 768, quality: 100) {
-                                ...GatsbyImageSharpFluid
+                            fluid(maxWidth: 768, quality: 80) {
+                                ...GatsbyImageSharpFluid_withWebp
                             }
                         } 
                     }
