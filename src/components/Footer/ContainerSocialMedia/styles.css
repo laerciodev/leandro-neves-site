@@ -1,0 +1,12 @@
+.container-social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.icon-social-media {
+  width: 30px;
+  fill: #707070;
+  margin-right: 10px;
+}

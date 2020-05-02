@@ -12,71 +12,67 @@ module.exports = {
         rule: {
           include: /\.inline\.svg$/,
           options: {
-            tag: 'svg',
-            name: 'Logo',
-            props: {
-              className: "logo-header",
-              title: 'Logo Studio Leandro Neves'
-            }
-          }
-        }
-      }
+            tag: "svg",
+            filters: [value => console.log("value: ", value)],
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content-home`,
-        path: `${__dirname}/src/static/assets/img/content-home`
-      }
+        path: `${__dirname}/src/static/assets/img/content-home`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `slides`,
-        path: `${__dirname}/src/static/assets/img/slides`
-      }
+        path: `${__dirname}/src/static/assets/img/slides`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `gallery-home`,
-        path: `${__dirname}/src/static/assets/img/gallery-home`
-      }
+        path: `${__dirname}/src/static/assets/img/gallery-home`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content-home`,
-        path: `${__dirname}/src/static/assets/img/content-home`
-      }
+        path: `${__dirname}/src/static/assets/img/content-home`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content-portfolio`,
-        path: `${__dirname}/src/static/assets/img/content-portfolio`
-      }
+        path: `${__dirname}/src/static/assets/img/content-portfolio`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content-nos`,
-        path: `${__dirname}/src/static/assets/img/content-nos`
-      }
+        path: `${__dirname}/src/static/assets/img/content-nos`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content-contato`,
-        path: `${__dirname}/src/static/assets/img/content-contato`
-      }
+        path: `${__dirname}/src/static/assets/img/content-contato`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `full-image`,
-        path: `${__dirname}/src/static/assets/img/full-image`
-      }
+        path: `${__dirname}/src/static/assets/img/full-image`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
