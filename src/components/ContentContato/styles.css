@@ -38,3 +38,14 @@
 .input.textarea {
     height: 127px;
 }
+
+.send-button {
+    width: 80px;
+    margin-top: 30px;
+    background-color: #E8E8E8;
+    color: #707070;
+    border: 0;
+    align-self: flex-end;
+    padding: 10px 15px;
+    font-size: 12px;
+}
