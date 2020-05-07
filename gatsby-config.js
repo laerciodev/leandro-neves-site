@@ -63,6 +63,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content-midia`,
+        path: `${__dirname}/src/static/assets/img/content-midia`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `content-contato`,
         path: `${__dirname}/src/static/assets/img/content-contato`,
       },
