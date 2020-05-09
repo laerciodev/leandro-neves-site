@@ -11,5 +11,10 @@
 .img-midia {
     margin: 20px 0;
     max-width: 165px;
+    filter: grayscale(100%);
+}
+
+.img-midia:hover {
+    filter: none;
 }
 
