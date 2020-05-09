@@ -19,6 +19,7 @@ const ContentMidia = () => {
                   childImageSharp {
                     fluid(maxWidth: 165, quality: 100) {
                       ...GatsbyImageSharpFluid_withWebp
+                      presentationHeight
                     }
                   }
                 }
@@ -36,7 +37,16 @@ const ContentMidia = () => {
 
     return (
         <main className="midia">
-            { imgsMidia.map(img => renderItemImg(img) ) }
+          <div className="container-big-images">
+            { imgsMidia.filter(img => img.node.childImageSharp.fluid.presentationHeight >= 280).map(
+              img => renderItemImg(img)
+            ) } 
+          </div>
+          <div className="container-small-images">
+            { imgsMidia.filter(img => img.node.childImageSharp.fluid.presentationHeight < 280).map(
+              img => renderItemImg(img)
+            ) } 
+          </div>
         </main>
     )
 }

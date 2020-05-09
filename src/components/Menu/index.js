@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import MenuContainer from './MenuContainer';
 import "./styles.css"
 
