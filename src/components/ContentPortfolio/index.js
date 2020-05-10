@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import './styles.css';
 
 const ContentPortfolio = () => {
@@ -15,7 +15,7 @@ const ContentPortfolio = () => {
                   node {
                     id
                     childImageSharp {
-                      fluid(maxWidth: 172) {
+                      fluid(maxWidth: 172, quality:100) {
                         ...GatsbyImageSharpFluid
                       }
                     }
@@ -31,12 +31,12 @@ const ContentPortfolio = () => {
     const labels = ['residencial', 'comercial', 'consultoria'];
 
     const renderItemPortfolio = (item, index) => (
-        <div className="container-portfolio" key={index}>
-            <picture>
-                <img className="img-portfolio" src={item.node.childImageSharp.fluid.src} />
-            </picture>
-            <h2 className="title-item-portfolio">{ labels[index] }</h2>
-        </div>    
+        <Link className="container-portfolio" key={index} to={`/portfolio/${labels[index]}`}>
+          <picture>
+              <img className="img-portfolio" src={item.node.childImageSharp.fluid.src} />
+          </picture>
+          <h2 className="title-item-portfolio">{ labels[index] }</h2>
+        </Link> 
     );
     
     return (
