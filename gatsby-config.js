@@ -56,6 +56,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content-portfolio-residencial`,
+        path: `${__dirname}/src/static/assets/img/content-portfolio-residencial`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `content-nos`,
         path: `${__dirname}/src/static/assets/img/content-nos`,
       },

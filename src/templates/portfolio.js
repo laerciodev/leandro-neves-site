@@ -1,7 +1,39 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-const TemplatePortfolio = ({ pageContext: { category } }) => (
-<h1>{ category }</h1>
-);
+export const query = graphql`
+    query ($category: String) {
+        allFile(filter: {
+            extension: {regex: "/(jpg)/"},
+            sourceInstanceName: {eq: $category}
+        }) {
+            edges {
+            node {
+                id
+                childImageSharp {
+                    fluid(maxWidth: 172) {
+                        srcWebp
+                    }
+                }
+            }
+            }
+        }
+    }
+`;
+
+const TemplatePortfolio = ({ pageContext: { category, queryPage } }) => {
+
+    const { allFile } = useStaticQuery(queryPage);
+
+    return (
+        <>
+            <Header />
+            <main>{ category }</main>
+            <Footer />
+        </>
+    )
+};
 
 export default TemplatePortfolio;

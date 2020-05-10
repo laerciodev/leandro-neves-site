@@ -1,4 +1,4 @@
-exports.createPages = async ({ actions }) => {
+exports.createPages = ({ actions }) => {
 
     const { createPage } = actions;
     const categories = ['residencial', 'comercial', 'consultoria'];
@@ -8,7 +8,8 @@ exports.createPages = async ({ actions }) => {
             path: `/portfolio/${category}`,
             component: require.resolve('./src/templates/portfolio.js'),
             context: {
-                category
+                category,
+                queryPage: `content-portffolio-${category}`
             }
         })
     })
