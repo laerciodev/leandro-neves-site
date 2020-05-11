@@ -9,7 +9,7 @@ exports.createPages = ({ actions }) => {
             component: require.resolve('./src/templates/portfolio.js'),
             context: {
                 category,
-                queryPage: `content-portffolio-${category}`
+                queryPage: `content-portfolio-${category}`
             }
         })
     })

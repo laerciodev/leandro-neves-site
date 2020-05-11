@@ -13,7 +13,6 @@ module.exports = {
           include: /\.inline\.svg$/,
           options: {
             tag: "svg",
-            filters: [value => console.log("value: ", value)],
           },
         },
       },

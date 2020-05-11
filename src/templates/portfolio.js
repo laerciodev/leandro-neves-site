@@ -1,36 +1,36 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useEffect } from 'react';
+import { graphql } from 'gatsby';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const query = graphql`
-    query ($category: String) {
+    query ($queryPage: String) {
         allFile(filter: {
             extension: {regex: "/(jpg)/"},
-            sourceInstanceName: {eq: $category}
+            sourceInstanceName: {eq: $queryPage}
         }) {
             edges {
-            node {
-                id
-                childImageSharp {
-                    fluid(maxWidth: 172) {
-                        srcWebp
+                node {
+                    id
+                    childImageSharp {
+                        fluid(maxWidth: 172) {
+                            srcWebp
+                        }
                     }
                 }
-            }
             }
         }
     }
 `;
 
-const TemplatePortfolio = ({ pageContext: { category, queryPage } }) => {
+const TemplatePortfolio = ({ data: { allFile: { edges: imgs } } }) => {
 
-    const { allFile } = useStaticQuery(queryPage);
+    useEffect(() => console.log('imgs => ', imgs), []);
 
     return (
         <>
             <Header />
-            <main>{ category }</main>
+            <main>main</main>
             <Footer />
         </>
     )
