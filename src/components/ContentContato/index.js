@@ -31,7 +31,7 @@ const ContentContato = () => {
   const { node: imgContato } = allFile.edges[0]
 
   return (
-    <>
+    <main className="main-contato">
       <Img fluid={imgContato.childImageSharp.fluid} key={imgContato.id} />
       <h2 className="title-contact">contato</h2>
       <p className="text-contact">
@@ -54,7 +54,7 @@ const ContentContato = () => {
         ></textarea>
         <button className="send-button">enviar</button>
       </form>
-    </>
+    </main>
   )
 }
 

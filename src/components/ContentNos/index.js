@@ -31,13 +31,13 @@ const ContentNos = () => {
   const { node: imgNos } = allFile.edges[0]
 
   return (
-    <>
+    <main className="main-nos">
       <Img fluid={imgNos.childImageSharp.fluid} key={imgNos.id} />
       <p className="text-nos">
         agora estamos prontos para te escutar... nos conte e daremos início ao
         seu projeto.
       </p>
-    </>
+    </main>
   )
 }
 

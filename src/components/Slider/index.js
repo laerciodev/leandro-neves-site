@@ -12,7 +12,7 @@ const Slider = () => {
                 allFile(filter: {
     	            extension: { regex: "/(jpg)/" }
     	            sourceInstanceName: { eq: "slides" }
-  	            }) 
+  	            })
                 {
                     edges {
                         node {
@@ -21,7 +21,7 @@ const Slider = () => {
                             fluid(maxWidth: 768) {
                                 ...GatsbyImageSharpFluid
                             }
-                        } 
+                        }
                     }
                 }
             }
@@ -31,10 +31,10 @@ const Slider = () => {
 
     const { edges: slides } = allFile;
 
-    const handleNext = () =>  {
+    const handleNext = () => {
         index === (slides.length - 1) ? setIndex(0) : setIndex(index + 1);
     };
-    
+
     const initEffect = () => {
         const timeout = setTimeout(handleNext, 3000);
 
@@ -44,24 +44,20 @@ const Slider = () => {
     }
 
     useEffect(initEffect, [index]);
-    
-    const verImagens = () => {
-        console.log(slides);
-    }
 
     const renderImg = (img, indexImg) => (
-        <picture key={indexImg}  className="item-slider picture">
-            <img className="img-slider" src={ slides[indexImg].node.childImageSharp.fluid.src } alt={`imagem ${index}`} />
+        <picture key={indexImg} className="item-slider picture">
+            <img className="img-slider" src={slides[indexImg].node.childImageSharp.fluid.src} alt={`imagem ${index}`} />
         </picture>
     );
 
     const renderControls = () => {
         const controls = [];
 
-        for(let i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
             controls.push(
                 <SlideControl
-                    key={i} 
+                    key={i}
                     active={index === i ? 'true' : 'false'}
                     to={`/#slide-${i}`}>
                 </SlideControl>
@@ -72,14 +68,14 @@ const Slider = () => {
     }
 
     return (
-        <>
+        <div className="container-slides">
             <ContainerSlides index={index}>
-                { slides.map((slide, index) => renderImg(slide, index))}
+                {slides.map((slide, index) => renderImg(slide, index))}
             </ContainerSlides>
             <div className="container-controls">
-               { renderControls() }
+                {renderControls()}
             </div>
-        </>
+        </div>
     );
 
 }
