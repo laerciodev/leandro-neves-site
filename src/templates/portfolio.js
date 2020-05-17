@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Header from '../components/Header';
@@ -27,19 +27,30 @@ export const query = graphql`
 
 const TemplatePortfolio = ({ data: { allFile: { edges: imgs } } }) => {
 
-    useEffect(() => console.log('imgs => ', imgs), []);
+    const [labelImgs, setLabelImgs] = useState([
+        'residência gb',
+        'residência jl',
+        'studio ac',
+        'residência js',
+        'residência lj',
+        'residência wm',
+        'residência vw',
+        'apart cp',
+        'suite js',
+        'suite ms'
+    ]);
 
-    const renderImg = img =>
+    const renderImg = (img, index) =>
         <div className="container-img">
             <Img loading='auto' className="img-portfolio-template" fluid={img.node.childImageSharp.fluid} key={img.node.id} />
-            <h3 className="h3-img-portfolio">residencial</h3>
+            <h3 className="h3-img-portfolio">{labelImgs[index]}</h3>
         </div>
     return (
         <>
             <Header />
             <main className="main-portfolio">
                 <div className="container-imgs">
-                    {imgs.map(img => renderImg(img))}
+                    {imgs.map((img, index) => renderImg(img, index))}
                 </div>
             </main>
             <Footer />
